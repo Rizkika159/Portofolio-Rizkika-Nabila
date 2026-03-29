@@ -1,0 +1,105 @@
+/* Menggunakan Font Modern (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Palet Warna Modern Dark Mode */
+  --bg-color: #0d1117; /* Biru tua gelap (ala GitHub) */
+  --card-bg: #161b22;   /* Sedikit lebih terang untuk kartu */
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --accent-color: #9b59b6; /* Warna ungu keren */
+  --hover-color: #bb8fce;
+  --nav-bg: rgba(13, 17, 23, 0.95); /* Sedikit transparan */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kustomisasi Navbar */
+.navbar-custom {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px); /* Efek blur kaca */
+  border-bottom: 1px solid #30363d;
+  padding: 15px 0;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  color: var(--accent-color) !important;
+  font-size: 1.5rem;
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--hover-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Tombol Keren */
+.btn-accent {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+}
+
+/* Kustomisasi Kartu Portofolio */
+.custom-card {
+  background-color: var(--card-bg);
+  border: 1px solid #30363d;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px) scale(1.02); /* Efek angkat */
+  box-shadow: 0 10px 25px rgba(155, 89, 182, 0.2);
+  border-color: var(--accent-color);
+}
+
+.custom-card .card-body {
+  padding: 25px;
+}
+
+.custom-card .card-title {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.custom-card .card-text {
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* Utility Class */
+.text-accent {
+  color: var(--accent-color);
+}
+
+.section-title {
+  font-weight: 700;
+  border-bottom: 3px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
